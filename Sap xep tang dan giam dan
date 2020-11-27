@@ -1,0 +1,31 @@
+#include <stdio.h>
+int main() 
+{
+    int a, b, c, trunggian;
+    printf("Nhap so a: ");
+    scanf("%d", &a);
+    printf("Nhap so b: ");
+    scanf("%d", &b);
+    printf("Nhap so c: ");
+    scanf("%d", &c);
+    if(a>b)
+    {
+      trunggian=a;
+      a=b;
+      b=trunggian;
+    }
+    if(b>c)
+    {
+      trunggian=b;
+      b=c;
+      c=trunggian;
+    }
+    if(a>b)
+    {
+      trunggian=a;
+      a=b;
+      b=trunggian;
+    }
+    printf("Forward order: %d %d %d\n", c, b, a);
+    printf("Backward order: %d %d %d", a, b, c);
+}
