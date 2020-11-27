@@ -1,0 +1,42 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+	float a,b,c,d,x,x1,x2;
+	printf("Cho Phuong trinh ax + b =0\n");
+	printf("Nhap a: ");
+	scanf("%f",&a);
+	printf("Nhap b: ");
+	scanf("%f",&b);
+	printf("Nhap c: ");
+	scanf("%f",&c);
+	d=b*b-4*a*c;
+	if(a==0)
+	{
+		if(b==0)
+		{
+			if(c==0)
+				printf("Phuong trinh vo so nghiem ");
+			else
+				printf("Phuong trinh vo nghiem");
+		}
+		else
+		{
+			x=-c/b;
+			printf("Nghiem cua phuong trinh la x= %.2f",x);
+		}
+	}
+	else if (d<0)
+		printf("Phuong trinh vo nghiem");
+	else if (d==0)
+	{
+		x=(-b)*1.0/(2*a);
+		printf("phuong trinh co nghiem kep: x1=x2= %.2f",x);
+	}
+	else 
+	{
+		x1=(-b+sqrt(d))/(2*a);
+		x2=(-b-sqrt(d))/(2*a);
+		printf("Phuong trinh co 2 nghiem:\n x1= %.2f \n x2= %.2f",x1,x2);
+	}
+}
