@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+int main() 
+{
+    int a, b, c, trunggian;
+    cout<<"Nhap so a: ";
+    cin>>a;
+    cout<<"Nhap so b: ";
+    cin>>b;
+    cout<<"Nhap so c: ";
+    cin>>c;
+    if(a>b)
+    {
+      trunggian=a;
+      a=b;
+      b=trunggian;
+    }
+    if(b>c)
+    {
+      trunggian=b;
+      b=c;
+      c=trunggian;
+    }
+    if(a>b)
+    {
+      trunggian=a;
+      a=b;
+      b=trunggian;
+    }
+    cout<<"Forward order: "<<c<<" "<<b<<" "<<a<<endl;
+    cout<<"Backward order: "<<a<<" "<<b<<" "<<c;
+}
