@@ -1,0 +1,46 @@
+#include<iostream>
+using namespace std;
+
+void array(int a[],int &n){
+	cout<<"enter the length of the array: ";
+	cin>>n;
+	while (n<0)
+		{
+			cout<<"length of the array cannot be a negative number\nEnter again: ";
+			cin>>n;
+		}
+	cout<<"enter every element: ";
+	for (int i=0;i<n;i++){
+		cin>>a[i];
+	}
+	bool inc=true;
+		int x=a[0];	
+	for (int i=1;i<n;i++){
+		if (a[i]<x)
+		inc=false;
+		else {
+		x=a[i];
+		continue;
+	}
+	}
+	bool dec=true;
+			int y=a[0];
+	for (int i=1;i<n;i++){
+		if(a[i]>y)
+		dec=false;
+		else {
+		y=a[i];
+		continue;
+	}
+	}
+	if (inc)
+	cout<<"increasing";
+	else if (dec)
+	cout<<"decreasing";
+	else 
+	cout<<"in no specific order";
+}
+int main(){
+	int n,a[100];
+	array(a,n);
+}
