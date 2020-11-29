@@ -1,0 +1,36 @@
+#include<iostream>
+using namespace std;
+
+bool isEven(int n){
+	if (n%2==0)
+	return true;
+	return false;
+}
+
+void array(int a[],int &n){
+	cout<<"enter the length of the array: ";
+	cin>>n;
+	while (n<0)
+		{
+			cout<<"length of the array cannot be a negative number\nEnter again: ";
+			cin>>n;
+		}
+	cout<<"enter every element: ";
+	for (int i=0;i<n;i++)
+		cin>>a[i];
+		cout<<"Even element(s): ";
+	for (int i=0;i<n;i++){
+		if (isEven(a[i]))
+		cout<<a[i]<<" ";
+	}	
+		cout<<"\nOdd element(s): ";
+	for (int i=0;i<n;i++){
+		if (!isEven(a[i]))
+			cout<<a[i]<<" ";
+	}
+}
+int main(){
+	int a[100],n;
+	array(a,n);
+	return 0;
+}
