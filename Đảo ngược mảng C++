@@ -1,0 +1,34 @@
+#include<iostream>
+using namespace std;
+
+void inputArray(int a[], int &n){
+	cout<<"enter the length of the array: ";
+	cin>>n;
+	cout<<"enter every element (>=0): ";
+	for (int i=0;i<n;i++){
+	cin>>a[i];
+	if (a[i]<0){
+		cout<<"enter again please: ";
+		i=i-1;
+	}
+}}
+
+void reverse(int a[], int &n){
+	int b[100];
+	for (int i=0,j=n-1;i<n,j>=0;i++,j--){
+		b[j]=a[i];
+	}
+	for (int i=0;i<n;i++)
+	{
+		a[i]=b[i];
+	}
+	cout<<"reversed array: ";
+	for (int i=0;i<n;i++)
+	 cout<<a[i]<<" ";
+}
+int main(){
+	int a[100],n;
+	inputArray(a,n);
+	reverse(a,n);
+	return 0;
+}
