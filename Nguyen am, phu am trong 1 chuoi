@@ -1,0 +1,33 @@
+#include<iostream>
+#include<stdio.h>
+#include<string.h>
+using namespace std;
+int main() {
+	char s[150];
+	int vowels, consonant, digit, space;
+	vowels = consonant = digit = space = 0;
+	gets_s(s);
+	for (int i = 0; s[i] != '\0'; ++i) {
+		if (s[i] == 'a' || s[i] == 'e' || s[i] == 'i' ||
+			s[i] == 'o' || s[i] == 'u' || s[i] == 'A' ||
+			s[i] == 'E' || s[i] == 'I' || s[i] == 'O' ||
+			s[i] == 'U') {
+			++vowels;
+		}
+		else if ((s[i] >= 'a' && s[i] <= 'z') || (s[i] >= 'A' && s[i] <= 'Z')) {
+			++consonant;
+		}
+		else if (s[i] >= '0' && s[i] <= '9') {
+			++digit;
+		}
+		else if (s[i] == ' ') {
+			++space;
+		}
+	}
+	cout << "Nguyen am: " << vowels << endl;
+	cout << "Phu am: " <<
+		consonant << endl;
+	cout << "Chu so: " << digit << endl;
+	cout << "Khoang trang: " << space << endl;
+	return 0;
+}
